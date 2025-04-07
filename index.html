@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>2048 Game with Levels</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>2048 Game</h1>
+
+  <div class="player-input">
+    <input type="text" id="playerName" placeholder="Enter your name" />
+  </div>
+  
+  <div class="level-select" id="levels">
+    <label for="gridSize"><strong>Select Difficulty:</strong></label>
+    <select id="gridSize">
+      <option value="4">🟢 Easy (4x4)</option>
+      <option value="5">🟡 Medium (5x5)</option>
+      <option value="6">🔴 Hard (6x6)</option>
+    </select>
+    <button onclick="startGame()">🎮 Start Game</button>
+    <div id="controlButtons" style="margin-top: 10px;">
+      <button onclick="pauseGame()">⏸️ Pause Game</button>
+      <button onclick="resumeGame()">▶️ Resume Game</button>
+      <button onclick="endGame()">🛑 End Game</button>
+      <button onclick="restartGame()">🔄 Restart Game</button>
+      <button onclick="resetHighScore()">🧹 Reset High Score</button>
+    </div>
+  </div>
+
+  <div class="scoreboard">
+    <div class="score-box" id="score">Score: 0</div>
+    <div class="score-box" id="highScore">High Score: 0</div>
+  </div>
+
+  <div class="grid" id="grid"></div>
+
+  <div class="info-box" id="about">
+    <h3>ℹ️ About</h3>
+    <ul> 
+        <li> 🎉 2048 is easy, addictive & fun — no math skills needed!</li>
+        <li> 🧠 Slide & merge matching tiles to reach the 2048 tile.</li>
+        <li> 🎮 Use arrow keys (↑ ↓ ← →) to control the board. </li>
+        <li> 🔁 Every move slides all tiles — strategy + a bit of luck! </li>
+        <li> 🏆 Finish with a lower score to show your mastery. </li>
+        <li> 📱 Fully mobile-friendly — play on phones, tablets & desktops!</li>
+    </ul>
+  </div>
+  
+  <div class="info-box" id="instructions">
+    <h3>📖 Instructions</h3>
+    <ul>
+      <li>Use arrow keys (↑ ↓ ← →) to move tiles.</li>
+      <li>Tiles with the same number combine when they touch.</li>
+      <li>Reach 2048 to win, but try to keep going for a high score!</li>
+      <li>Choose difficulty by selecting grid size before starting.</li>
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
